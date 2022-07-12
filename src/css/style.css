@@ -1,0 +1,43 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 25px 0 25px 0
+}
+
+li {
+    list-style: none;
+}
+
+i {
+    position: relative;
+    top: 2px;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+.__logo {
+    margin-left: 25px;
+}
+
+.__nav-link ul  {
+    display: flex;
+}
+
+.__nav-link ul li {
+    padding: 0 20px 0 20px;
+}
+
+.__btn-header {
+    margin-right: 25px;
+}
+
