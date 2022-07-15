@@ -6,6 +6,7 @@
 
 header {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     margin: 25px 0 25px 0
@@ -25,13 +26,26 @@ a {
     color: #000;
 }
 
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.__nav-link ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .__logo {
     margin-left: 25px;
 }
 
-.__nav-link ul  {
-    display: flex;
-}
+/* .__nav-link ul  {
+    
+} */
 
 .__nav-link ul li {
     padding: 0 20px 0 20px;
@@ -41,3 +55,32 @@ a {
     margin-right: 25px;
 }
 
+.__menu-bar {
+    display: none;
+    color: #000;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
+    .__logo {
+        width: 80px;
+    }
+
+    .__nav-link, .__btn-header {
+        display: none;
+    }
+
+    .__nav-link {
+        width: 100%;
+    }
+
+    .__menu-bar {
+        width: 100%;
+        margin-right: 25px;
+        display: block;
+    }
+
+    .__nav-link.show-menu {
+        display: flex;
+    }
+}
