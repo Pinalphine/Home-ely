@@ -1,28 +1,28 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500&display=swap');
+
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+body {
+    background-color: #fff;
+}
+
+/* setup */
 .container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    font-family: 'Roboto', sans-serif;
+    color:rgb(83, 83, 83);
     margin-left: 25px;
     margin-right: 25px;
     margin-top: 25px;
     margin-bottom: 25px;
-}
-
-.__hero {
-    display: flex;
-    align-items: center;
-    margin: 0 auto;
-}
-
-.content {
-    padding-left: 50px;
 }
 
 li {
@@ -30,33 +30,100 @@ li {
 }
 
 i {
+    font-size: 1.5rem;
     position: relative;
-    top: 2px;
+    top: 4px;
 }
 
 a {
     text-decoration: none;
-    color: #000;
+    color:rgb(83, 83, 83);
+}
+
+/* logo */
+.__logo {
+    position: relative;
+    bottom: 4px;
+    color:#4184ff;
+    cursor: pointer;
+}
+
+/* nav */
+.__menu-bar {
+    display: none;
+    cursor: pointer;
 }
 
 .__nav-link ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-size: 0.9rem;
+    font-weight: 400;
 }
 
-.__sign-in {
-    margin-right: 15px;
+nav ul a:hover {
+    color:#4184ff;
 }
 
 nav ul a li{
     padding: 0 15px 0 15px;
 }
 
-.__menu-bar {
+.__nav-action ul {
+    margin-top: 5px;
+    display:flex;
+}
+
+.__nav-action ul li {
+    padding: 5px;
+}
+
+/* btns */
+
+.__btn-header {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.__sign-in {
+    margin-right: 25px;
+    font-size: .9rem;
+    color:#000;
+    font-weight: 500;
+
+}
+
+.__contact-mob {
     display: none;
-    color: #000;
-    cursor: pointer;
+}
+
+.__contact {
+	background-color: #4184ff;
+	border-radius:18px;
+	display:flex;
+    align-items: center;
+    justify-content: center;
+	cursor:pointer;
+	color:#ffffff;
+	font-size:.9rem;
+	font-weight:bold;
+    border-style: none;
+    width: 112px;
+    height: 36px;
+	
+}
+
+/* hero */
+.__action-bar h1 {
+    padding-left: 5px;
+}
+
+.__hero {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
 }
 
 .__hero {
@@ -77,56 +144,62 @@ nav ul a li{
 }
 
 
-.__action-bar h1 {
-    padding-left: 5px;
-}
-
-.__nav-action ul {
-    margin-top: 5px;
-    display:flex;
-
-}
-
-.__nav-action ul li {
-    padding: 5px;
-}
-
 @media screen and (max-width: 767px) {
-
-    .__nav-link, .__btn-header {
-        display: none;
+    
+    /* logo */
+    .__logo {
+        top: 2px;
     }
-
-    .__nav-link {
-        width: 100%;
-    }
-
-    .__nav-link ul, .__btn-header button {
-        flex-direction: column;
-    }
-
-
-    .__sign-in {
-        width: 100;
-        position: relative;
-        top:5px;
-        left: 15px;
-    }
-
-    .__contact {
-        position: relative;
-        top: 30px;
-        right: 45px;
-
-    }
-
+    /* mobile nav */
     .__menu-bar {
         display: block;
     }
 
-    .__nav-link.show-menu, .__btn-header.show-menu  {
-        display: flex;
+    .__nav-link.show-menu, .__btn-header.show-menu {
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
-    
+    .__menu-link {
+        margin: 15px;
+    }
+
+    .__menu-link-buy {
+        margin-top: 4rem;;
+        margin-bottom: 15px;
+    }
+
+    .__nav-link ul {
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .__nav-link, .__btn-header {
+        width:100%;
+        display: none;
+    }
+
+    /* btn-mobile */
+    .__sign-in {
+        position: relative;
+        
+    }
+
+    .__btn-header {
+        flex-direction: column;
+    }
+
+    .__contact {
+        display: none;
+    }
+
+    .__contact-mob {
+        display: block;
+        font-size: .9rem;
+        color: #000;
+    }
 }
