@@ -9,6 +9,7 @@
 
 body {
     background-color: #fff;
+    font-size: 1rem;
 }
 
 /* setup */
@@ -17,6 +18,7 @@ body {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    margin: 0 auto;
     font-family: 'Roboto', sans-serif;
     color:rgb(83, 83, 83);
     margin-left: 25px;
@@ -29,6 +31,13 @@ li {
     list-style: none;
 }
 
+
+h1 {
+    font-weight: 600;
+    font-size: 2.3rem;
+    line-height: 3.1rem;
+}
+
 i {
     font-size: 1.5rem;
     position: relative;
@@ -36,8 +45,20 @@ i {
 }
 
 a {
+    display: inline-block;
     text-decoration: none;
     color:rgb(83, 83, 83);
+}
+
+p {
+    font-size: 1rem;
+    padding: 1rem 0;
+}
+
+img {
+    max-width: 100%;
+    object-fit: cover;
+    justify-content: center;
 }
 
 /* logo */
@@ -87,6 +108,17 @@ nav ul a li{
     justify-content: center;
 }
 
+.page-btn {
+    font-weight: 400;
+    font-size: 1rem;
+    color: #fff;
+    text-transform: capitalize;
+    outline: 1px solid #4184ff;
+    background: #4184ff;
+    border-radius: 10px;
+    padding: 10px 15px;
+}
+
 .__sign-in {
     margin-right: 25px;
     font-size: .9rem;
@@ -107,8 +139,8 @@ nav ul a li{
     justify-content: center;
 	cursor:pointer;
 	color:#ffffff;
-	font-size:.9rem;
-	font-weight:bold;
+	font-size:.95rem;
+	font-weight:400;
     border-style: none;
     width: 112px;
     height: 36px;
@@ -116,31 +148,9 @@ nav ul a li{
 }
 
 /* hero */
-.__action-bar h1 {
-    padding-left: 5px;
-}
 
-.__hero {
-    display: flex;
-    align-items: center;
-    margin: 0 auto;
-}
-
-.__hero {
-    width: 100%;
-    height: 500px;
-    background-color: #ffeacb;
-    
-}
-
-.__action-bar {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100px;
-    background-color: coral;
+.hero {
+    padding: 2rem 0;
 }
 
 
@@ -157,10 +167,11 @@ nav ul a li{
 
     .__nav-link.show-menu, .__btn-header.show-menu {
         display:flex;
+        
         flex-direction: column;
         justify-content: center;
-        align-items: center;
-    }
+        align-items: center; 
+    } 
 
     .__menu-link {
         margin: 15px;
