@@ -5,3 +5,115 @@
     margin: 0;
     padding: 0;
 }
+
+:root {
+/* bg colors */
+    --bg-color: #fff;
+    --bg-color-blue: #f4fafc;
+    --bg-color-alt: #27292d;
+    --bg-color-inv: #eeeff1;
+
+    /* txt colors */
+    --title-text: #282a2e;
+    --p-text: #b1b5bb;
+    --alt-text: #fdfdfd;
+    --normal-text: #34373b;
+    --hover-text: #459dff;
+
+    /* other colors */
+    --btn: #2289ff;
+    --btn-hover: #304862;
+
+    /* other */
+    --z-bg: -1;
+    --z-default: 1;
+    --z-top: 10;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', 'sans-serif';
+    background-color: var(--bg-color);
+    display: grid;
+    /* height: 100vh; */
+    grid-template-areas: 
+    "nav nav nav"
+    "hero hero hero"
+    "result result result"
+    "accordion accordion accordion"
+    "about about about"
+    "cta cta cta"
+    "footer footer footer";
+    margin: 10px;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(1fr, 6);
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.flex>* {
+    display: flex;
+}
+
+/* grid */
+header {
+    grid-area: nav;
+}
+
+.hero {
+    grid-area: hero;
+}
+
+/* .result {
+    grid-area: result;
+}
+
+.accordion {
+    grid-area: accordion;
+}
+
+.about {
+    grid-area: about;
+}
+
+.cta {
+    grid-area: cta;
+}
+
+.footer {
+    grid-area: footer;
+} */
+
+
+/* nav */
+
+nav {
+    display: inline-flex;
+    background-color: cyan;
+    width: 100%;
+    height: 60px;
+    padding: 25px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+ul li {
+    padding-left: 50px;
+}
+
+nav li:last-child {
+    padding-left: 75px;
+}
+
+
+
